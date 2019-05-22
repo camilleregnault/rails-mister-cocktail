@@ -1,3 +1,11 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1496134732667-ae8d2853a045?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+  <div class="container">
+    <h1>Have a  <strong>cocktail</strong> !</h1>
+    <p>Find a great recipe or make your own</p>
+    <!-- <a class="btn btn-flat" href="#">Apply now</a> -->
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
@@ -5,14 +13,14 @@
       <ul class="list-group">
         <% @cocktails.each do |cocktail| %>
           <li class="list-group-item">
+            <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
             <%= link_to cocktail.name, cocktail_path(cocktail) %>
           </li>
         <% end %>
       </ul>
       <%= link_to "Add a new Cocktail", new_cocktail_path, class: 'btn btn-primary' %>
- <%= cl_image_tag("qsoc75svgijyzwjtaifc.jpg",width: 400, height: 300, crop: :fill) %>
     </div>
   </div>
 </div>
 
-<%= cl_image_tag("qsoc75svgijyzwjtaifc.jpg") %>
+

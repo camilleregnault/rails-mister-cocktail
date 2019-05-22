@@ -21,4 +21,7 @@ Ingredient.create(name: 'lemon')
 Ingredient.create(name: 'ice')
 Ingredient.create(name: 'mint leaves')
 
-Cocktail.create(name: 'mojito')
+mojito = Cocktail.create(name: 'Mojito')
+url = 'http://res.cloudinary.com/dabuecrzn/image/upload/v1558519129/tog8nkfqgd1nxphcwifb.jpg'
+mojito.remote_photo_url = url
+mojito.save
